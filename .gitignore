@@ -6,3 +6,4 @@ env/
 *.crt
 *.key
 terraform/terraform
+*.pyc
