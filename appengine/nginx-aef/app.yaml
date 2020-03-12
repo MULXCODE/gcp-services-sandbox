@@ -1,0 +1,5 @@
+runtime: custom
+env: flex
+network:
+  name: projects/[NETWORK_PROJECT_ID]/global/networks/[VPC_NAME]
+  subnetwork_name: [SUBNETWORK_NAME]
