@@ -1,3 +1,4 @@
 credentials.json
 sa-key.json
 *.json
+source.env
