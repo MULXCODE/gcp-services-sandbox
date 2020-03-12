@@ -3,3 +3,5 @@ sa-key.json
 *.json
 source.env
 env/
+*.crt
+*.key
