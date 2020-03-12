@@ -1,6 +1,6 @@
 # GCP Services Sandbox
 
-A set of various GCP examples.  
+A set of various GCP examples that can be used as reference.
 
 ## Getting Started
 
@@ -13,4 +13,8 @@ source source.env
 
 echo $PROJECT_ID # testing to ensure the sourced var is set
 ```
+
+## Contributing
+
+* Naming Convention of Sub Folders: [prog_language?]-[function|feature]
 
