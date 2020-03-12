@@ -5,3 +5,4 @@ source.env
 env/
 *.crt
 *.key
+terraform/terraform
