@@ -1,6 +1,6 @@
 import MySQLdb
 
-host="255.255.255.255_or_dns"
+host="127.0.0.1"
 user="your_user"
 password="your_pass"
 db_schema="db_schema"
