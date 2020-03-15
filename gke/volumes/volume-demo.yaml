@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: volumes-example-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: demo
+  template:
+    metadata:
+      labels:
+        app: demo
+    spec:
+      containers:
+      - name: test-container
+        image: gcr.io/google-samples/hello-app:1.0
+        volumeMounts:
+        - mountPath: /cache
+          name: cache-volume
+      volumes:
+        - name: cache-volume
+          emptyDir: {}
