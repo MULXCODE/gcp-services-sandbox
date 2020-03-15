@@ -1,0 +1,6 @@
+title: "Custom IAM Role Viewer"
+description: "View IAM roles."
+stage: "ALPHA"
+includedPermissions:
+- iam.roles.get
+- iam.roles.list
