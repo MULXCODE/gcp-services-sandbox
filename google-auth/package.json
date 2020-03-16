@@ -1,0 +1,35 @@
+{
+  "name": "express-passport-google-oauth-exmple",
+  "version": "1.0.0",
+  "description": "example of Express + Google OAuth app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bognix/express-passport-google-oauth-exmple.git"
+  },
+  "keywords": [
+    "express",
+    "passport",
+    "google-oauth"
+  ],
+  "author": "Bogna 'bognix' Knychala",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bognix/express-passport-google-oauth-exmple/issues"
+  },
+  "homepage": "https://github.com/bognix/express-passport-google-oauth-exmple#readme",
+  "dependencies": {
+    "cookie-parser": "^1.4.3",
+    "cookie-session": "^2.0.0-alpha.2",
+    "express": "^4.14.1",
+    "mustache": "^3.1.0",
+    "mustache-express": "^1.3.0",
+    "passport": "^0.3.2"
+  },
+  "devDependencies": {
+    "passport-google-oauth2": "^0.2.0"
+  }
+}
