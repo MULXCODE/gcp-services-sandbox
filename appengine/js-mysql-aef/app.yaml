@@ -1,0 +1,10 @@
+runtime: nodejs
+env: flex
+env_variables:
+  DB_HOST: 34.68.173.59
+  DB_DATABASE: forseti_security
+  DB_USER: root
+  DB_PASS: password
+network:
+  name: projects/network-prd-3aa9/global/networks/vpc-prd
+  subnetwork_name: app-us-c1

@@ -1,5 +1,6 @@
 runtime: custom
 env: flex
+service: mobile
 network:
-  name: projects/[NETWORK_PROJECT_ID]/global/networks/[VPC_NAME]
-  subnetwork_name: [SUBNETWORK_NAME]
+  name: projects/network-prd-3aa9/global/networks/vpc-prd
+  subnetwork_name: app-us-c1

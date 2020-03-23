@@ -1,0 +1,1 @@
+gunicorn -b :8080 --keep-alive=600 main:app

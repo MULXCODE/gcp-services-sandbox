@@ -1,0 +1,2 @@
+def bye():
+    print('bye')
