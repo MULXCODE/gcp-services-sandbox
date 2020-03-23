@@ -65,8 +65,10 @@ open localhost:8080/download-kaggle
 ## Docker - Build
 
 ```bash
-docker build . -t gcr.io/elevated-watch-270607/download-kaggle
-docker run -d -p 8081:8080 --env-file env.list gcr.io/elevated-watch-270607/download-kaggle
+PROJECT_ID="[YOUR_PROJECT_ID_HERE]"
+
+docker build . -t gcr.io/$PROJECT_ID/download-kaggle
+docker run -d -p 8080:8080 --env-file env.list gcr.io/$PROJECT_ID/download-kaggle
 
 # test via HTTP get to localhost:8080/download-kaggle
 open localhost:8080/download-kaggle
@@ -83,11 +85,18 @@ gcloud app deploy --quiet
 
 * PyLint (.pylintrc defines rules)
 
-    ```bash
-    pylint --load-plugins pylint_quotes *.py
-    ```
+```bash
+pylint --load-plugins pylint_quotes *.py
+```
 
 ## Admin Commands and References
+
+* Docker - kill container
+
+```bash
+docker ps
+docker kill $CONTAINER_ID
+```
 
 * Docker - exec into container
 
@@ -103,3 +112,9 @@ kaggle datasets download -d sudalairajkumar/novel-corona-virus-2019-dataset --fo
 unzip -o -q novel*.zip -d data/
 ```
 
+* Kaggle Testing
+
+```bash
+export KAGGLE_USERNAME=yourusername
+export KAGGLE_KEY=2323232yourkey232323232
+```
