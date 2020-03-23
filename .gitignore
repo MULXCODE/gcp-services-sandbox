@@ -7,3 +7,6 @@ env/
 *.key
 terraform/terraform
 *.pyc
+
+node_modules/
+*.zip
