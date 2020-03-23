@@ -1,9 +1,0 @@
-runtime: custom
-env: flex
-service: graph
-env_variables:
-  KAGGLE_USERNAME: [YOUR_USER_HERE]
-  KAGGLE_KEY: [YOUR_KEY_HERE]
-network:
-  name: projects/network-prd-3aa9/global/networks/vpc-prd
-  subnetwork_name: app-us-c1
