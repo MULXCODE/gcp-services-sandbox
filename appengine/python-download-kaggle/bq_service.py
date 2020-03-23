@@ -1,20 +1,8 @@
 from os import listdir
 from os.path import isfile, join
 from google.cloud import bigquery
-import string
-import random
-import time
-
-
-def get_datestr_yyyymmdd():
-    return time.strftime('%Y%m%d')
-
-
-def generate_random_char(len):
-    lst = [random.choice(string.ascii_letters + string.digits)
-           for n in xrange(30)]
-    str = "".join(lst)
-    return str
+from date_utils import get_datestr_yyyymmdd
+from random_utils import generate_random_char
 
 
 def upload_to_bq():
@@ -22,7 +10,8 @@ def upload_to_bq():
 
     folder = 'data'
     # filename = 'data/time_series_covid_19_confirmed.csv'
-    dataset_id = 'coronavirus_dataset_' + get_datestr_yyyymmdd() + '_' + generate_random_char(2)
+    dataset_id = 'coronavirus_dataset_' + get_datestr_yyyymmdd() + '_' + \
+        generate_random_char(2)
     full_dataset_id = '{}.{}'.format('elevated-watch-270607', dataset_id)
     dataset = bigquery.Dataset(full_dataset_id)
     dataset.location = 'US'

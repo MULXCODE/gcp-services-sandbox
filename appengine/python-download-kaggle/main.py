@@ -38,9 +38,9 @@ def download_kaggle():
     return 'Success'
 
 
-@app.route('/env')
-def get_env():
-    return str(os.environ)
+# @app.route('/env')
+# def get_env():
+#     return str(os.environ)
 
 
 if __name__ == '__main__':

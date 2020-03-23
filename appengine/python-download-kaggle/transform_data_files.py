@@ -1,7 +1,7 @@
 # convert a isoformat date to MM/DD/YYYY HH:MM:SS
 
 import csv
-from convert_date_util import convert_to_mmddyyyy_hhmmss
+from date_utils import convert_to_mmddyyyy_hhmmss
 
 isoformat_date_string = '2020-02-02T23:43:02'
 result = convert_to_mmddyyyy_hhmmss(isoformat_date_string)
