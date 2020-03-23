@@ -8,9 +8,5 @@ dispatch:
       service: default
 
     # Send all mobile traffic to the mobile frontend.
-    - url: '*/mobile/*'
-      service: mobile-frontend
-
-    # Send all work to the one static backend.
-    - url: '*/work/*'
-      service: static-backend
+    - url: '*/graph/*'
+      service: graph

@@ -1,12 +1,19 @@
 credentials.json
 sa-key.json
-
 source.env
+env.list
+
+# python
 env/
 *.crt
 *.key
-terraform/terraform
 *.pyc
 
+# nodejs
 node_modules/
 *.zip
+
+# terraform
+terraform/terraform
+.terraform
+terraform.tfstate*
