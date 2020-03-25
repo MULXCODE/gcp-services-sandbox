@@ -1,0 +1,7 @@
+runtime: java
+env: flex
+service: spring-boot
+network:
+  name: projects/network-prd-3aa9/global/networks/vpc-prd
+  subnetwork_name: app-us-c1
+
