@@ -1,0 +1,3 @@
+inputs = {
+  location = "US"
+}
