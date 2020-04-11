@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<body>
+<div>Identity Platform Quickstart</div>
+<div id="message">Loading...</div>
+</body>
+
+<script src="https://www.gstatic.com/firebasejs/7.14.0/firebase.js"></script>
+<script>
+  var config = {
+    apiKey: "",
+    authDomain: "gwc-core.firebaseapp.com",
+  };
+  firebase.initializeApp(config);
+</script>
+
+<script>
+  var email = 'james@haha.com';
+  var password = 'nvalidPassword';
+
+  firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+      document.getElementById('message').innerHTML = 'Welcome, ' + user.email;
+    } else {
+      document.getElementById('message').innerHTML = 'No user signed in.';
+    }
+  });
+
+  firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
+    document.getElementById('message').innerHTML = error.message;
+  });
+</script>
