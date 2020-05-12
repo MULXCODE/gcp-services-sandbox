@@ -1,0 +1,16 @@
+---
+- name: "Sample Playbook"
+  hosts: localhost
+  tasks:
+    - copy:
+        src: "../files/master.gitconfig"
+        dest: "~/.gitconfig3"
+    - apt:
+        name: jq
+        state: latest
+      become: true
+    - apt:
+        name: telnet software-properties-common
+        state: latest
+      become: true
+
