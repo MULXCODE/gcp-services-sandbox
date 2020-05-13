@@ -1,0 +1,13 @@
+---
+- name: "Sample Playbook"
+  hosts: localhost
+  tasks:
+    - pip:
+          name: PyMySQL 
+
+    - name: Create a new database with name 'bobdata'
+      mysql_db:
+          name: bobdata
+          state: present
+
+

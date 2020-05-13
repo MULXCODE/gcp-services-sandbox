@@ -1,0 +1,5 @@
+inventory.generated
+instance_names
+.terraform
+.retry
+.tfstate
