@@ -1,0 +1,15 @@
+# Basic Ansible hosts for testing without Active Directory. Replace
+# <user> and <password> with whatever username and password you have
+# configured on your non Active Directory Window shosts
+
+# Web group. You can use IP addresses or host names but if you use 
+# host names, be sure DNS is setup correctly so they resolve 
+[web]
+10.138.15.217
+
+[web:vars]
+ansible_user=ansible
+ansible_password=[YOUR_PASSWORD_HERE]
+ansible_connection=winrm
+ansible_winrm_transport=basic
+ansible_port=5985 # http port, change to 5986 if using https
