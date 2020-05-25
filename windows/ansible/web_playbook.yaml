@@ -1,7 +1,7 @@
 ---
 - hosts: web
   vars:
-      globomantics_site_path: "c:\\inetpub\\wwwroot\\globosite"
+      gwc_site_path: "c:\\inetpub\\wwwroot\\globosite"
       default_index_file: 'index.html'
   tasks:
       - name: Ensure that IIS is installed
@@ -12,26 +12,26 @@
             include_sub_features: no
             include_management_tools: no
 
-      - name: Ensure the globomantics website directory is created
+      - name: Ensure the gwc website directory is created
         win_file:
-            path: '{{ globomantics_site_path }}'
+            path: '{{ gwc_site_path }}'
             state: directory
 
       - name: Create sub iis website
         win_iis_website:
-            name: 'Globomantics Application'
+            name: 'GWC Application'
             state: started
             port: 8080
-            physical_path: '{{ globomantics_site_path }}'
+            physical_path: '{{ gwc_site_path }}'
 
       - name: Copy default index file to site
         win_copy:
             src: '{{ default_index_file }}'
-            dest: "{{ globomantics_site_path}}\\index.html"
+            dest: "{{ gwc_site_path}}\\index.html"
 
       - name: Ensure filewall rule is in place for site
         win_firewall_rule:
-            name: Globomantics
+            name: GWC
             enabled: yes
             state: present
             localport: 8080
