@@ -6,24 +6,29 @@
 2. Create a local file, `inventory` with the username set to `ansible` and the password set to the `[YOUR_PASSWORD_HERE]`
 3. On the target host, if you are using WINRM over HTTP (Port 5985), then ensure that you run these commands in `PowerShell` as an `Administrator`:
 
-  winrm set winrm/config/service '@{AllowUnencrypted="true"}'
-  winrm set winrm/config/service/Auth '@{Basic="true"}'
-  netsh advfirewall firewall add rule name="WinRM-HTTP" dir=in localport=5985 protocol=TCP action=allow
+    ```bash
+    winrm set winrm/config/service '@{AllowUnencrypted="true"}'
+    winrm set winrm/config/service/Auth '@{Basic="true"}'
+    netsh advfirewall firewall add rule name="WinRM-HTTP" dir=in localport=5985 protocol=TCP action=allow
+    ```
 
 4. Test out ansible connectivity from a Linux Bastion Host
 
     ```bash
-        sudo apt-get install -y telnet ansible python3-pip
-        pip3 install pywinrm[credssp]
+    sudo apt-get install -y telnet ansible python3-pip
+    pip3 install pywinrm[credssp]
 
-        ansible -i inventory web -m win_ping
+    ansible -i inventory web -m win_ping
     ```
 
-Example Response:
-10.10.10.10 | SUCCESS => {
-    "changed": false,
-    "ping": "pong"
-}
+    Example Response:
+
+    ```bash
+    10.10.10.10 | SUCCESS => {
+        "changed": false,
+        "ping": "pong"
+    }
+    ```
 
 ## Commands
 
